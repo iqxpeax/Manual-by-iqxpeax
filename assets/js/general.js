@@ -426,24 +426,24 @@ const pages = [
         <li>Karma Client</li>
         <li>Cortex Client</li>
       </ul>
+      ${localImg('image78.png', 'Скриншот 2 — Injgen.')}
+      ${localImg('image47.png', 'Скриншот 3 — Пример софта.')}
 
       <p><strong>Протестирован на:</strong> Lunar Client (все версии), Feather Client (все версии), Minecraft Vanilla 1.7.10–1.21.4, LabyMod.</p>
 
       <div class="section-title">BamParser — анализ истории BAM</div>
-      ${localImg('image25.png', 'Скриншот 1 — внешний вид BamParser. Видны все .exe которые запускались на компьютере через службу BAM.')}
-
+      
       <p>BAM — служба Windows, которая в реестре ведёт лог всех запускавшихся .exe. Данные сохраняются даже после удаления файлов. BamParser извлекает эти данные.</p>
-
+      
       <p><strong>Порядок работы:</strong> открываем у игрока от администратора, ждём полной загрузки всех процессов. Нажимаем галочку <strong>Not Signed Only</strong> — фильтруем только неподписанные файлы.</p>
-      ${localImg('image78.png', 'Скриншот 2 — кнопка Not Signed Only в BamParser. После нажатия видны только неподписанные .exe — читы обычно не имеют цифровой подписи.')}
-
+      
       <ul class="plain-list">
-        <li>Название чита = <strong>бан</strong>.</li>
-        <li>Файл переименован (.exe → .rar, .zip, .png и т.д.) — находим в Everything, переименовываем обратно в .exe, запускаем. Открылся лоудер = <strong>бан</strong>.</li>
-        <li>Файл помечен как удалённый (deleted) — открываем Journal Trace, ищем факт удаления. Удаление после начала проверки или после запуска Minecraft = <strong>бан</strong>. Также смотрим переименование файла перед удалением (например .exe → .txt → удалён).</li>
-        <li>Файл можно найти в Browser Download View — скачан с сайта cortex, nemezida, vape или другого чит-сайта = <strong>бан</strong>.</li>
+      <li>Название чита = <strong>бан</strong>.</li>
+      <li>Файл переименован (.exe → .rar, .zip, .png и т.д.) — находим в Everything, переименовываем обратно в .exe, запускаем. Открылся лоудер = <strong>бан</strong>.</li>
+      <li>Файл помечен как удалённый (deleted) — открываем Journal Trace, ищем факт удаления. Удаление после начала проверки или после запуска Minecraft = <strong>бан</strong>. Также смотрим переименование файла перед удалением (например .exe → .txt → удалён).</li>
+      <li>Файл можно найти в Browser Download View — скачан с сайта cortex, nemezida, vape или другого чит-сайта = <strong>бан</strong>.</li>
       </ul>
-      ${localImg('image47.png', 'Скриншот 3 — пример подозрительного файла в BamParser. Видно имя файла и путь. Проверяем в Everything.')}
+      ${localImg('image25.png', 'Скриншот 1 — внешний вид BamParser. Видны все .exe которые запускались на компьютере через службу BAM.')}
     `,
     callout: null,
     calloutLink: null,
@@ -533,27 +533,32 @@ const pages = [
     tag: "Античит",
     intro: "Ocean — основной инструмент глубокого анализа системы игрока от команды anticheat.ac. Модератор видит результаты в веб-панели, на компьютере игрока запускается агент OceanCLI.",
     content: `
-      ${localImg('image87.png', 'Скриншот 1 — панель модератора anticheat.ac/dashboard. Здесь создаём сессию проверки и получаем Pin-код для игрока.')}
-
+    ${localImg('image87.png', 'Скриншот 1 — панель модератора anticheat.ac/dashboard. Здесь создаём сессию проверки и получаем Pin-код для игрока.')}
+    ${localImg('image11.png', 'Скриншот 2 — внешний вид.')}
+      ${localImg('image98.png', 'Скриншот 3 — Внешний вид.')}
+      
       <div class="section-title">Если у игрока не загружается сайт</div>
       <ul class="plain-list">
-        <li>Попробовать другой браузер.</li>
+      <li>Попробовать другой браузер.</li>
         <li>Скачать и запустить zapret (инструмент обхода блокировок для Discord/YouTube — помогает и с anticheat.ac).</li>
       </ul>
+      ${localImg('image116.png', 'Скриншот 4 — Пример сыллки на сайт.')}
 
       <div class="section-title">Запуск OceanCLI у игрока</div>
       <ul class="plain-list">
-        <li>Создать папку на рабочем столе (Ocean / 123).</li>
-        <li>Переместить туда OceanCLI.exe.</li>
-        <li>Скопировать путь к папке (Shift + ПКМ → "Копировать как путь").</li>
+      <li>Создать папку на рабочем столе (Ocean / 123).</li>
+      <li>Переместить туда OceanCLI.exe.</li> 
+      ${localImg('image40.png', 'Скриншот 5 — Создание папки.')}
+      <li>Скопировать путь к папке .</li>
+      ${localImg('image74.png', 'Скриншот 6 — Копирование пути.')}
         <li>Открыть CMD: <code>Win+R → cmd → Enter</code>.</li>
         <li>Ввести: <code>cd [путь к папке]</code> → Enter.</li>
         <li>Ввести: <code>OceanCLI.exe [Pin-код с сайта]</code> → Enter.</li>
         <li>Ждать 1–7 минут. Результат появится в панели модератора.</li>
       </ul>
-      ${localImg('image11.png', 'Скриншот 2 — запуск OceanCLI в командной строке. Вводим команду с Pin-кодом полученным с сайта.')}
-      ${localImg('image98.png', 'Скриншот 3 — процесс сканирования OceanCLI. Ждём завершения (1-7 минут).')}
-      ${localImg('image116.png', 'Скриншот 4 — пример результата: чистая проверка. Нет детектов — продолжаем проверку другими инструментами.')}
+
+      ${localImg('image26.png', 'Скриншот 7 — Панель модератора.')}
+      ${localImg('image75.png', 'Скриншот 8 Панель модератора.')}
 
       <div class="section-title">Критерии бана по результатам Ocean</div>
       <ul class="plain-list">
@@ -561,12 +566,9 @@ const pages = [
         <li><strong>Generic Injection (Type A)</strong> — активный инжект. Бан.</li>
         <li><strong>Название чита</strong> — бан, но с уточнением. Cortex, Nursultan, Prestige могут срабатывать ложно если чит удалён более года назад — Ocean всё равно находит остаточные следы. Требует дополнительного расследования.</li>
         <li><strong>Generic Cheat (A)</strong> — признаки чита. Бан.</li>
-        <li>Другие странные срабатывания — уточни у старшего модератора.</li>
+        <li>Другие странные срабатывания — уточни у Остальных кто шарит</li>
       </ul>
-      ${localImg('image40.png', 'Скриншот 5 — пример срабатывания Ocean. Видно название детекта и тип обнаружения.')}
-      ${localImg('image74.png', 'Скриншот 6 — пример детекта чит-клиента. Generic Injection (Type A) = бан.')}
-      ${localImg('image26.png', 'Скриншот 7 — детали срабатывания Ocean. Видны технические подробности детекта.')}
-      ${localImg('image75.png', 'Скриншот 8 — полный результат сканирования с несколькими детектами.')}
+      
     `,
     callout: null,
     calloutLink: null,
@@ -624,15 +626,15 @@ const pages = [
     tag: "Последние файлы",
     intro: "Показывает файлы которые недавно открывались на компьютере. Данные из MRU-списков реестра, папки Recent, Jump Lists. Особенно полезна когда файл уже удалён, но след остался.",
     content: `
-      ${localImg('image7.png', 'Скриншот 1 — внешний вид RecentFileView. Список файлов которые были открыты на компьютере с временем последнего запуска.')}
-
-      <ul class="plain-list">
-        <li>Сортируем по колонке <strong>Execute Time</strong>.</li>
-        <li>Просматриваем все .exe и .jar за последние 14 дней.</li>
-        <li>Кликаем по каждому подозрительному файлу — если существует, открываем двойным кликом.</li>
-        <li>Открылся лоудер или DoomsDay = <strong>бан</strong>.</li>
-        <li>Файл уже удалён — переходим в Journal Trace, ищем по имени и дате.</li>
-      </ul>
+    
+    <ul class="plain-list">
+    <li>Сортируем по колонке <strong>Execute Time</strong>.</li>
+    <li>Просматриваем все .exe и .jar за последние 14 дней.</li>
+    <li>Кликаем по каждому подозрительному файлу — если существует, открываем двойным кликом.</li>
+    <li>Открылся лоудер или DoomsDay = <strong>бан</strong>.</li>
+    <li>Файл уже удалён — переходим в Journal Trace, ищем по имени и дате.</li>
+    </ul>
+    ${localImg('image7.png', 'Скриншот 1 — внешний вид RecentFileView. Список файлов которые были открыты на компьютере с временем последнего запуска.')}
 
       <p>Особое внимание: файлы из нестандартных путей (Temp, AppData/Roaming), файлы со случайными именами, файлы которые запускались во время игровой сессии.</p>
     `,
@@ -655,18 +657,18 @@ const pages = [
     tag: "Запущенные программы",
     intro: "Собирает данные о запускавшихся программах из Windows Prefetch, UserAssist реестра, AppCompatCache. Более широкая картина чем BamParser — включает программы которых нет в BAM.",
     content: `
-      ${localImg('image61.png', 'Скриншот 1 — внешний вид ExecutedProgramsList. Видны все программы которые запускались на компьютере с датой последнего запуска.')}
-
-      <p>Запускаем, дважды кликаем по заголовку <strong>Last Executed On</strong> — сортировка по дате (свежие сверху).</p>
-      ${localImg('image85.png', 'Скриншот 2 — сортировка по дате последнего запуска. Двойной клик по заголовку колонки.')}
-
-      <ul class="plain-list">
-        <li><code>Ctrl+F</code> — ищем по именам читов.</li>
-        <li>Поиск по <code>downloads</code> — запуски из папки Загрузки.</li>
-        <li>Поиск по <code>Desktop</code> или <code>Рабочий стол</code> — аналогично.</li>
-        <li>Колонки <strong>Product Name</strong> и <strong>Company Name</strong> — у легитимных программ заполнены. Если пустые у недавнего файла — подозрительно, стоит найти и проверить.</li>
-      </ul>
-      ${localImg('image42.png', 'Скриншот 3 — пример файла с пустыми Product Name и Company Name. Подозрительно для недавно запущенного файла — ищем в Everything.')}
+    
+    <p>Запускаем, дважды кликаем по заголовку <strong>Last Executed On</strong> — сортировка по дате (свежие сверху).</p>
+    ${localImg('image61.png', 'Скриншот 1 — внешний вид ExecutedProgramsList. Видны все программы которые запускались на компьютере с датой последнего запуска.')}
+    
+    <ul class="plain-list">
+    <li><code>Ctrl+F</code> — ищем по именам читов.</li>
+    <li>Поиск по <code>downloads</code> — запуски из папки Загрузки.</li>
+    <li>Поиск по <code>Desktop</code> или <code>Рабочий стол</code> — аналогично.</li>
+    ${localImg('image85.png', 'Скриншот 2 — сортировка по дате последнего запуска. Двойной клик по заголовку колонки.')}
+    <li>Колонки <strong>Product Name</strong> и <strong>Company Name</strong> — у легитимных программ заполнены. Если пустые у недавнего файла — подозрительно, стоит найти и проверить.</li>
+    </ul>
+    ${localImg('image42.png', 'Скриншот 3 — пример файла с пустыми Product Name и Company Name. Подозрительно для недавно запущенного файла — ищем в Everything.')}
     `,
     callout: null,
     calloutLink: null,
@@ -694,23 +696,23 @@ const pages = [
       </ul>
 
       <div class="section-title">UsbDeview</div>
+      
+      <ul class="plain-list">
+      <li>Запускаем, сортируем по колонке <strong>Registry Time 1</strong>.</li>
+      <li>Смотрим дату последнего подключения каждого устройства.</li>
+      <li>Флешка подключалась после начала проверки = <strong>бан</strong>.</li>
+      </ul>
       ${localImg('image67.png', 'Скриншот 1 — внешний вид UsbDeview. История всех USB-устройств когда-либо подключавшихся к компьютеру.')}
 
-      <ul class="plain-list">
-        <li>Запускаем, сортируем по колонке <strong>Registry Time 1</strong>.</li>
-        <li>Смотрим дату последнего подключения каждого устройства.</li>
-        <li>Флешка подключалась после начала проверки = <strong>бан</strong>.</li>
-      </ul>
-
       <div class="section-title">System Informer — Disk Devices</div>
-      ${localImg('image114.png', 'Скриншот 2 — System Informer, вкладка Disk Devices. Здесь видны все подключённые и ранее подключавшиеся дисковые устройства.')}
-
+      
       <ul class="plain-list">
-        <li>Запускаем System Informer → System → Options → <strong>Disk Devices</strong>.</li>
-        <li>Кликаем на каждую флешку → вкладка <strong>Сведения</strong> → стрелочка справа от "Описание устройства".</li>
-        <li>Ищем строку <strong>"Дата последнего удаления"</strong> — время физического отключения устройства.</li>
-        <li>Время после начала проверки или за 1–2 минуты до начала = <strong>бан</strong>.</li>
+      <li>Запускаем System Informer → System → Options → <strong>Disk Devices</strong>.</li>
+      <li>Кликаем на каждую флешку → вкладка <strong>Сведения</strong> → стрелочка справа от "Описание устройства".</li>
+      <li>Ищем строку <strong>"Дата последнего удаления"</strong> — время физического отключения устройства.</li>
+      <li>Время после начала проверки или за 1–2 минуты до начала = <strong>бан</strong>.</li>
       </ul>
+      ${localImg('image114.png', 'Скриншот 2 — System Informer, вкладка Disk Devices. Здесь видны все подключённые и ранее подключавшиеся дисковые устройства.')}
     `,
     callout: null,
     calloutLink: null,
@@ -731,26 +733,28 @@ const pages = [
     tag: "Анализ .jar файлов",
     intro: "HolyCheck — онлайн-платформа для быстрой проверки модов. Recaf — Java-декомпилятор для изучения байткода. В паре с нейросетью (DeepSeek) позволяют найти запрещённый функционал даже в обфусцированных и неизвестных модах.",
     content: `
-      <ul class="link-list">
-        <li><span>Recaf</span><a href="https://sourceforge.net/projects/recaf.mirror/files/latest/download" target="_blank" rel="noopener">скачать</a></li>
+    <ul class="link-list">
+    <li><span>Recaf</span><a href="https://sourceforge.net/projects/recaf.mirror/files/latest/download" target="_blank" rel="noopener">скачать</a></li>
         <li><span>HolyCheck — проверка модов</span><a href="https://mods.holyworld.me/mods/check" target="_blank" rel="noopener">открыть</a></li>
         <li><span>anticheat.ac/strings — база строк читов</span><a href="https://anticheat.ac/strings/" target="_blank" rel="noopener">открыть</a></li>
         <li><span>DeepSeek — нейросеть для анализа кода</span><a href="https://chat.deepseek.com/" target="_blank" rel="noopener">открыть</a></li>
-      </ul>
-
-      <div class="section-title">Алгоритм проверки модов</div>
-      ${localImg('image77.png', 'Скриншот 1 — HolyCheck, вкладка проверки модов. Перетаскиваем все .jar файлы игрока в это поле.')}
-
+        </ul>
+        
+        <div class="section-title">Алгоритм проверки модов</div>
+        ${localImg('image77.png', 'Скриншот 1 — HolyCheck, вкладка проверки модов. Перетаскиваем все .jar файлы игрока в это поле.')}
+        ${localImg('image14.png', 'Скриншот 2 — ')}
+        ${localImg('image79.png', 'Скриншот 3 — .')}
+        
       <ul class="plain-list">
-        <li><strong>Шаг 1.</strong> Скидываем все моды на HolyCheck. Результат "чит" = баним. Исключение: некоторые моды запрещены на HolyWorld, но разрешены у нас (crystal optimizer, target hud). В таком случае скачиваем мод с официального сайта и сравниваем вес. Совпадает = пропускаем.</li>
+      <li><strong>Шаг 1.</strong> Скидываем все моды на HolyCheck. Результат "чит" = баним. Исключение: некоторые моды запрещены на HolyWorld, но разрешены у нас (crystal optimizer, target hud). В таком случае скачиваем мод с официального сайта и сравниваем вес. Совпадает = пропускаем.</li>
+      ${localImg('image50.png', 'Скриншот 4 — Пример чита')}
         <li><strong>Шаг 2.</strong> Файл "чистый" = пропускаем. Файл "неизвестный" или "спам" (например keystrokes от LabyMod) = идём дальше.</li>
+        ${localImg('image84.png', 'Скриншот 6 — ')}
         <li><strong>Шаг 3.</strong> Загружаем неизвестный файл на <a href="https://anticheat.ac/strings/" target="_blank">anticheat.ac/strings/</a>. Нашло совпадения = бан.</li>
         <li><strong>Шаг 4.</strong> Ничего не нашло = открываем в Recaf. Ищем запрещённые строки: hitboxlimit, reach, size 0.5, bind (E). Мод обфусцирован (нечитаемый набор символов: jjjjjjaauiuqk) = бан (обфусцированные моды запрещены).</li>
         <li><strong>Шаг 5.</strong> Копируем классы (особенно mixin) в DeepSeek с вопросом: "есть ли здесь запрещённый функционал для Minecraft?" Нейросеть подробно разберёт код.</li>
       </ul>
 
-      ${localImg('image14.png', 'Скриншот 2 — Recaf, структура .jar файла. Видны папки с классами (директории). Здесь проверяем наличие запрещённых классов.')}
-      ${localImg('image79.png', 'Скриншот 3 — Recaf, пример mixin-класса. Именно в mixin-классах обычно прячут запрещённый функционал (хитбоксы, autoattack).')}
 
       <div class="section-title">Что искать в Recaf — по типу лоудера</div>
 
@@ -760,7 +764,6 @@ const pages = [
         <li><code>class_239</code> — это HitResult (обработка попаданий, autoattack)</li>
         <li><code>class_1799</code> — это ItemStack (свапп предметов)</li>
       </ul>
-      ${localImg('image50.png', 'Скриншот 4 — пример mixin хитбоксов в Recaf для Fabric. Видим метод method_5857 (setBoundingBox) — это хитбокс-мод = бан.')}
 
       <p><strong>Forge моды:</strong></p>
       <ul class="plain-list">
@@ -768,8 +771,7 @@ const pages = [
         <li><code>RayTraceResult</code>, <code>EntityRayTraceResult</code> — autoattack</li>
         <li><code>ItemStack</code> — свапп</li>
       </ul>
-      ${localImg('image86.png', 'Скриншот 5 — пример event хитбоксов для Forge. Хитбокс через event на рендер игрока = бан.')}
-
+      
       <p><strong>LabyMod 3 моды:</strong></p>
       <ul class="plain-list">
         <li>Метод <code>a</code> в классе <code>dci</code> = setBoundingBox / AxisAlignedBB</li>
@@ -782,17 +784,17 @@ const pages = [
 
       <div class="section-title">XRay с изменённым названием</div>
       <p>Открываем архив ресурспака → <strong>assets → minecraft → models → block</strong>. Видим файлы с именем XRay = <strong>бан</strong>. В .json файлах ищем строку <code>"Copyright 2018 Filmjolk David Grindholmen"</code> — сигнатура известного XRay пака.</p>
-      ${localImg('image84.png', 'Скриншот 6 — структура XRay ресурспака. В папке block видны файлы с именем XRay = бан.')}
 
       <div class="section-title">Анализ через нейросеть</div>
-      ${localImg('image99.png', 'Скриншот 7 — DeepSeek, анализ кода мода. Вставляем код класса и задаём вопрос о запрещённом функционале.')}
       <ul class="plain-list">
-        <li><strong>.jar файлы:</strong> открываем в Recaf, копируем mixin-классы → вставляем в DeepSeek с вопросом "есть ли запрещённый функционал для Minecraft?"</li>
-        <li><strong>.dll файлы:</strong> открываем в блокноте, копируем 30–50% кода → вставляем в DeepSeek с тем же вопросом.</li>
+      <li><strong>.jar файлы:</strong> открываем в Recaf, копируем mixin-классы → вставляем в DeepSeek с вопросом "есть ли запрещённый функционал для Minecraft?"</li>
+      <li><strong>.dll файлы:</strong> открываем в блокноте, копируем 30–50% кода → вставляем в DeepSeek с тем же вопросом.</li>
       </ul>
-
+      ${localImg('image86.png', 'Скриншот 5 — .')}
+      ${localImg('image99.png', 'Скриншот 7 — .')}
+      
       <p>Совет: всегда копировать все классы и строки и вставлять в нейросеть — она подробно распишет что нашла.</p>
-    `,
+      `,
     callout: null,
     calloutLink: null,
     steps: [
